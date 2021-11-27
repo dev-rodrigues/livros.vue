@@ -24,12 +24,9 @@
 
 <style>
   :root {
-      --background: #bfa374;
       --denial: #f21d41;
-      
       --completed: #f38264;
       --allowed: #75baa8;
-
       --text: #0f0f0f;      
   }
 
@@ -37,5 +34,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--text);
   }  
 </style>

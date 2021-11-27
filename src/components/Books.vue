@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div>
+    <div class="root">
+        <div class="container">
             <h1>Books</h1>
             <div class="books">
                 <div
@@ -55,6 +55,15 @@
 </script>
 
 <style scoped>
+    .root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    .container {
+        max-width: 10240px;
+    }
     .books {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -78,7 +87,6 @@
     }
 
     .read {
-        color: #fff;
         background: var(--completed)
     }
 </style>
