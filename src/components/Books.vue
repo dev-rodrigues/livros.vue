@@ -63,7 +63,7 @@
 
     .book {
         border: 1px solid #ccc;
-        background: #41b883;
+        background: var(--allowed);
         padding: 1rem;
         border-radius: 5px;
         text-align: center;
@@ -71,10 +71,14 @@
         cursor: pointer;
 
         margin: 0 20px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .read {
         color: #fff;
-        background: #35495e;
+        background: var(--completed)
     }
 </style>

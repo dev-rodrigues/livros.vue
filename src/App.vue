@@ -24,10 +24,13 @@
 
 <style>
   :root {
-      --background: #fafafa;
-      --text: #454545;
-      --blue: #375F9A;
-      --title: #0f0f0f;
+      --background: #bfa374;
+      --denial: #f21d41;
+      
+      --completed: #f38264;
+      --allowed: #75baa8;
+
+      --text: #0f0f0f;      
   }
 
   * {
