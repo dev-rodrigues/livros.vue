@@ -21,17 +21,26 @@ const actions = {
         console.log('addBook', commit, title);
     },
 
-    async updateBook( { commit }, title) {
-        console.log('updateBook', commit, title);
+    async updateBook( { commit }, book) {
+        console.log('updateBook', commit, book);
+        commit('updateBook', book)
     },
 
-    async deleteBook( { commit }, title) {
-        console.log('deleteBook', commit, title);
+    async deleteBook( { commit }, book) {
+        console.log('deletebook', state.books);
+        commit('removeBook', book.id);
     }
 }
 
 const mutations = {
     setBooks: (state, books) => (state.books = books),
+    removeBook: (state, id) => state.books = state.books.filter(book => book.id !== id),
+    updateBook: (state, book) => {
+
+        const index = state.books.findIndex(b => b.id === book.id);
+
+        state.books.splice(index, 1, book);
+    }
 }
 
 export default createStore({
