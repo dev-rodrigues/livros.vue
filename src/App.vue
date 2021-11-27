@@ -1,18 +1,28 @@
 <template>
-  <h1>oi</h1>
+  <div>
+    <AddBook />
+    <FilterBook />
+    <Books />
+  </div>
 </template>
 
 <script>
 
-export default {
-  name: 'App',
-  components: {
+  import AddBook from './components/AddBook.vue';
+  import FilterBook from './components/FilterBook.vue';
+  import Books from './components/Books.vue';
+
+  export default {
+    name: 'App',
+    components: {
+      AddBook,
+      FilterBook,
+      Books
+    }
   }
-}
 </script>
 
 <style>
-
   :root {
       --background: #fafafa;
       --text: #454545;
