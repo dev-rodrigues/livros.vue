@@ -4,7 +4,7 @@
     </div>
 
     <div class="root">
-        <h2>Add new book</h2>            
+        <h2>ADD NEW BOOK</h2>            
         <div class="container">
                 <form class="newBook" @submit="handleSubmit">
                     <input 

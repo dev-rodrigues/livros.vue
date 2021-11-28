@@ -18,7 +18,7 @@
 
                         <div id="operation">
                             <i class="fa fa-trash-alt" v-on:click="deleteBook(book)"></i>
-                            <i class="fa fa-paint-brush"></i>
+                            <i class="fa fa-paint-brush" v-on:click="editBook(book)"></i>
                         </div>
                         
                     </div>                    
@@ -50,6 +50,14 @@
                     read: !book.read
                 }
                 this.updateBook(updated);
+            },
+            editBook(book) {
+                this.$router.push({
+                    path: '/edit',
+                    query: {
+                        id: book.id
+                    }
+                });
             }
         },
         computed: mapGetters(['allBooks']),
