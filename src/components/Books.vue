@@ -86,6 +86,14 @@
         
     }
 
+    @media (max-width: 990px) {
+        .book {
+            width: 400px;
+            height: 60px;      
+            align-items: center;
+        }
+    }
+
     .book:hover {
         transform: translateX(10px);
         transition: transform 0.2s;

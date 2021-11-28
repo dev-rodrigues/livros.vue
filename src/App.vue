@@ -30,10 +30,12 @@
     align-items: center;
     height: 100%;
   }
+  
   .container {
     max-width: 10240px;
     display: flex;
   }
+
 
   #nav {
     display: flex;
