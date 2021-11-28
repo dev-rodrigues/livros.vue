@@ -1,8 +1,8 @@
 <template>
     <div class="root">
         <div class="container">
-            <h1>Books</h1>
             <div class="books">
+                <h1>Books</h1>
                 <div
                     @dblclick="handleDbClick(book)"
                     v-for="(book) in allBooks"
@@ -10,6 +10,7 @@
                     :key="book.id"
                     v-bind:class="{'read':book.read}"
                     >
+
                     {{ book.title }}
 
                     <i 
@@ -55,19 +56,11 @@
 </script>
 
 <style scoped>
-    .root {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-    }
-    .container {
-        max-width: 10240px;
-    }
     .books {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 1rem;
+        text-align: center;
     }
 
     .book {
@@ -80,7 +73,7 @@
         cursor: pointer;
 
         margin: 0 20px;
-
+        width: 950px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
