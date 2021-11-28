@@ -17,25 +17,12 @@
                         type="text" 
                         placeholder="author">
 
-                    <input
-                        v-model="country"
-                        type="text" 
-                        placeholder="country">
+
 
                     <input
                         v-model="language"
                         type="text" 
                         placeholder="language">
-
-                    <input
-                        v-model="pages"
-                        type="number" 
-                        placeholder="pages">
-
-                    <input
-                        v-model="year"
-                        type="number" 
-                        placeholder="year">
 
                     <input type="submit" value="Save">
                 </form>
@@ -52,10 +39,7 @@
             return {                
                 title: '',
                 author: '',
-                country: '',
-                language: '',
-                pages: 0,
-                year: 0,            
+                language: '',                
             }
         },
         methods: {
@@ -68,10 +52,7 @@
                 const newBook = {
                     title: this.title,
                     author: this.author,
-                    country: this.country,
-                    language: this.language,
-                    pages: this.pages,
-                    year: this.year,
+                    language: this.language                    
                 }
 
                 if (this.isValid()) {
@@ -86,19 +67,8 @@
             isValid() {
                 return this.title.length > 0 &&
                     this.author.length > 0 &&
-                    this.country.length > 0 &&
-                    this.language.length > 0 &&
-                    this.pages > 0 &&
-                    this.year > 0;
-            },
-            resetFields() {
-                this.title = '';
-                this.author = '';
-                this.country = '';
-                this.language = '';
-                this.pages = 0;
-                this.year =  0;
-            }
+                    this.language.length > 0;                    
+            }            
         }
     }
 </script>
