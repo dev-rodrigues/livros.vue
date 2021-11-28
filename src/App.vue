@@ -9,14 +9,12 @@
 <script>
 
   import AddBook from './components/AddBook.vue';
-  import FilterBook from './components/FilterBook.vue';
   import Books from './components/Books.vue';
 
   export default {
     name: 'App',
     components: {
       AddBook,
-      FilterBook,
       Books
     }
   }
@@ -42,6 +40,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    margin-top: 50px;
   }
 
   .container {

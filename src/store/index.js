@@ -17,8 +17,10 @@ const actions = {
         commit('setBooks', response)
     },
 
-    async addBook( { commit }, title) {
-        console.log('addBook', commit, title);
+    async addBook( { commit }, book) {        
+        book.id = state.books.length + 1;
+        console.log('novo book', book)
+        commit('addBook', book)
     },
 
     async updateBook( { commit }, book) {
@@ -36,16 +38,15 @@ const mutations = {
     setBooks: (state, books) => (state.books = books),
     removeBook: (state, id) => state.books = state.books.filter(book => book.id !== id),
     updateBook: (state, book) => {
-
         const index = state.books.findIndex(b => b.id === book.id);
-
         state.books.splice(index, 1, book);
-    }
+    },
+    addBook: (state, book) => state.books.push(book),    
 }
 
 export default createStore({
     state,
     getters,
     actions,
-    mutations
+    mutations,    
 })

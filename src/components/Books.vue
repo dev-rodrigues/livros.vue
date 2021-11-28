@@ -3,20 +3,20 @@
         <div class="container">
             <div class="books">
                 <h1>Books</h1>
-                <div
-                    @dblclick="handleDbClick(book)"
-                    v-for="(book) in allBooks"
-                    class="book"
-                    :key="book.id"
-                    v-bind:class="{'read':book.read}"
-                    >
+                    <div                    
+                        @dblclick="handleDbClick(book)"
+                        v-for="(book) in allBooks"
+                        class="book"
+                        :key="book.id"
+                        v-bind:class="{'read':book.read}"
+                        >
 
-                    {{ book.title }}
+                        {{ book.title }}
 
-                    <i 
-                        class="fa fa-trash-alt"
-                        v-on:click="deleteBook(book)"></i>
-                </div>
+                        <i 
+                            class="fa fa-trash-alt"
+                            v-on:click="deleteBook(book)"></i>
+                    </div>                    
             </div>
         </div>
     </div>
@@ -26,6 +26,7 @@
     import { mapGetters, mapActions } from 'vuex';
     export default {
         name: "Books",
+
         methods: {
             ...mapActions([
                 'fetchBooks',
@@ -33,7 +34,6 @@
                 'updateBook'
             ]),
             handleDbClick(book) {
-                console.log('executando atualizacao de leitura do livro', book);
                 const updated = {
                     id: book.id,
                     author: book.author,
@@ -44,7 +44,6 @@
                     year: book.year,
                     read: !book.read
                 }
-
                 this.updateBook(updated);
             }
         },
@@ -61,6 +60,8 @@
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 1rem;
         text-align: center;
+
+        margin-bottom: 50px;
     }
 
     .book {
@@ -81,5 +82,10 @@
 
     .read {
         background: var(--completed)
+    }
+
+    .alert {
+        font-size: 30px;
+        color: var(--denial);
     }
 </style>
