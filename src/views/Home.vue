@@ -1,15 +1,18 @@
 <template>
-  <div class="home">
-    <h1>oi</h1>
+  <div class="home">    
+    <Books />
   </div>
 </template>
 
 <script>
 
-export default {
-  name: 'Home',
-  components: {
-    
-  }
+  import Books from '../components/Books.vue';
+
+
+  export default {
+    name: 'Home',
+    components: {
+      Books
+    }
 }
 </script>
