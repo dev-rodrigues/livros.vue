@@ -1,7 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">NEW</router-link>
   </div>
   <router-view/>
 </template>
@@ -15,21 +14,40 @@
     color: #2c3e50;
   }
   #nav {
-    padding: 30px;
+    display: flex;
+    padding: 30px 45px;  
   }
+
   #nav a {
-    font-weight: bold;
-    color: #2c3e50;
+    font-weight: bold;    
+    color: var(--white);
+    text-decoration: none;
+
+    text-align: center;
+    background: var(--allowed);
+    width: 100px;
+    height: 50px;
   }
+
   #nav a.router-link-exact-active {
-    color: #42b983;
+    color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;    
+  }
+
+  #nav a:hover {
+    filter: brightness(0.7);
   }
 
   :root {
       --denial: #f21d41;
       --completed: #f38264;
       --allowed: #75baa8;
-      --text: #0f0f0f;      
+      --text: #0f0f0f;
+      --white: #fafafa;
   }
   * {
     margin: 0;
