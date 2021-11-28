@@ -1,4 +1,7 @@
 <template>
+    <div id="nav">
+        <router-link to="/create">NEW</router-link>
+    </div>
     <div class="root">
         <div class="container">
             <div class="books">
@@ -87,5 +90,40 @@
     .alert {
         font-size: 30px;
         color: var(--denial);
+    }
+
+    #nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex:1;
+
+        width: 100px;
+        height: 50px;        
+        margin: 30px 45px;                
+        background: var(--allowed);
+        border-radius: 5px;
+        cursor: pointer;    
+    }
+
+    #nav > a {
+        width: 100%;        
+        font-weight: bold;    
+        color: var(--white);
+        text-decoration: none;
+        border-radius: 5px;
+
+    }
+
+    #nav a.router-link-exact-active {
+        color: var(--white);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav:hover {
+        filter: brightness(0.7);
     }
 </style>

@@ -8,7 +8,6 @@
 
   import Books from '../components/Books.vue';
 
-
   export default {
     name: 'Home',
     components: {
