@@ -45,7 +45,7 @@
 
 <script scoped>
     import { mapActions } from 'vuex';
-
+    
     export default {
         name: "AddBook",
         data() {
@@ -76,7 +76,7 @@
 
                 if (this.isValid()) {
                     this.addBook(newBook);
-                    this.resetFields();
+                    this.$router.push({ path: '/' })
 
                 } else {
                     alert('Please fill all the fields');
