@@ -1,4 +1,8 @@
 <template>
+    <div id="cancel">
+        <router-link to="/">CANCEL</router-link>
+    </div>
+
     <div class="root">
         <h2>Add new book</h2>            
         <div class="container">
@@ -33,7 +37,7 @@
                         type="number" 
                         placeholder="year">
 
-                    <input type="submit" value="Add">
+                    <input type="submit" value="Save">
                 </form>
         </div>
     </div>
