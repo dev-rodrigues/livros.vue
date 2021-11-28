@@ -1,12 +1,16 @@
 <template>
     <div>
-        edicao
+        <EditBook />
     </div>
 </template>
 
 <script>
+    import EditBook from '../components/EditBook.vue';
 
     export default {
-        name: 'Edit'
+        name: 'Edit',
+        components: {
+            EditBook
+        }
     }
 </script>

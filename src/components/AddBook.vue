@@ -1,7 +1,5 @@
 <template>
-    <div id="cancel">
-        <router-link to="/">CANCEL</router-link>
-    </div>
+    <Cancel />
 
     <div class="root">
         <h2>ADD NEW BOOK</h2>            
@@ -40,6 +38,8 @@
 
 <script scoped>
     import { mapActions } from 'vuex';
+
+    import Cancel from '../components/Cancel.vue';
     
     export default {
         name: "AddBook",
@@ -88,6 +88,9 @@
                     this.language.length > 0 &&
                     this.selected.length > 0;                    
             }            
+        },
+        components: {
+            Cancel
         }
     }
 </script>

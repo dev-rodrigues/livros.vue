@@ -53,10 +53,7 @@
             },
             editBook(book) {
                 this.$router.push({
-                    path: '/edit',
-                    query: {
-                        id: book.id
-                    }
+                    path: `/edit/${book.id}`,                                    
                 });
             }
         },
