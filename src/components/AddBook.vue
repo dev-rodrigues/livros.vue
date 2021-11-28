@@ -17,12 +17,20 @@
                         type="text" 
                         placeholder="author">
 
-
-
                     <input
                         v-model="language"
                         type="text" 
                         placeholder="language">
+                    
+                    <select v-model="selected">
+                            <option value="" disabled selected>SELECT AN GENRE</option>
+                        <option
+                            v-for="genre in genres"
+                            :value="genre"
+                            v-bind:key="genre">
+                            {{ genre }}
+                        </option>
+                    </select>
 
                     <input type="submit" value="Save">
                 </form>
@@ -39,7 +47,17 @@
             return {                
                 title: '',
                 author: '',
-                language: '',                
+                language: '',
+                selected: '',
+                genres: [
+                    'DRAMA',
+                    'COMEDY',
+                    'HORROR',
+                    'SCIENCE FICTION',
+                    'ROMANCE',
+                    'FANTASY',
+                    'HISTORY',
+                ]        
             }
         },
         methods: {
@@ -48,7 +66,7 @@
             ]),
             handleSubmit(event) {
                 event.preventDefault();
-                
+
                 const newBook = {
                     title: this.title,
                     author: this.author,
@@ -67,7 +85,8 @@
             isValid() {
                 return this.title.length > 0 &&
                     this.author.length > 0 &&
-                    this.language.length > 0;                    
+                    this.language.length > 0 &&
+                    this.selected.length > 0;                    
             }            
         }
     }
@@ -108,6 +127,19 @@
         border-radius: 5px;
         font-size: 18px;
         font-weight: 800
+    }
+
+    select {
+        background: var(--white);
+        color: var(--text);
+        border: 1px solid #41b883;
+        cursor: pointer;
+        width: 100%;
+        height: 40px;
+        margin: 10px 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 400
     }
 
     input[type="submit"]:hover {
