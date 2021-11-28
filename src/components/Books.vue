@@ -16,9 +16,11 @@
 
                         {{ book.title }}
 
-                        <i 
-                            class="fa fa-trash-alt"
-                            v-on:click="deleteBook(book)"></i>
+                        <div id="operation">
+                            <i class="fa fa-trash-alt" v-on:click="deleteBook(book)"></i>
+                            <i class="fa fa-paint-brush"></i>
+                        </div>
+                        
                     </div>                    
             </div>
         </div>

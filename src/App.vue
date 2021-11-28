@@ -102,4 +102,20 @@
   #cancel:hover {
     filter: brightness(0.7);
   }
+
+
+  #operation {
+    display: flex;
+    flex-direction: row;
+    width: 80px;    
+  }
+
+  #operation > i {
+    margin: 0 10px;
+  }
+
+  #operation:hover {
+    filter: opacity(0.9);
+  }
+
 </style>
