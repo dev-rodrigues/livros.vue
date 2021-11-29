@@ -41,12 +41,10 @@
             handleDbClick(book) {
                 const updated = {
                     id: book.id,
-                    author: book.author,
-                    country: book.country,
-                    language: book.language,      
-                    pages: book.pages,
                     title: book.title,
-                    year: book.year,
+                    author: book.author,
+                    language: book.language,
+                    genre: book.selected,
                     read: !book.read
                 }
                 this.updateBook(updated);

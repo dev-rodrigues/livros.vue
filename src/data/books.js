@@ -7,7 +7,8 @@ const data = [
       "pages": 209,
       "title": "Things Fall Apart",
       "year": 1958,
-      "read": false    
+      "read": false,
+      "genre": "HISTORY",
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@ const data = [
       "pages": 784,
       "title": "Fairy tales",
       "year": 1836,
-      "read": false    
+      "read": false,    
+      "genre": "HORROR",
     },
     {
       "id": 3,
@@ -27,7 +29,8 @@ const data = [
       "pages": 928,
       "title": "The Divine Comedy",
       "year": 1315,
-      "read": false    
+      "read": false,    
+      "genre": "ROMANCE",
     },
     {
       "id": 4,
@@ -37,7 +40,8 @@ const data = [
       "pages": 160,
       "title": "The Epic Of Gilgamesh",
       "year": -1700,
-      "read": false    
+      "read": false,
+      "genre": "Fiction",
     },
     {
       "id": 5,
@@ -47,7 +51,8 @@ const data = [
       "pages": 176,
       "title": "The Book Of Job",
       "year": -600,
-      "read": false    
+      "read": false,
+      "genre": "HISTORY",
     },
     {
       "id": 6,
@@ -57,7 +62,8 @@ const data = [
       "pages": 288,
       "title": "One Thousand and One Nights",
       "year": 1200,
-      "read": false    
+      "read": false,
+      "genre": "COMEDY"
     },
     {
       "id": 7,
@@ -67,7 +73,8 @@ const data = [
       "pages": 384,
       "title": "Nj\u00e1l's Saga",
       "year": 1350,
-      "read": false    
+      "read": false,
+      "genre": "FICTION",
     },
     {
       "id": 8,
@@ -77,7 +84,8 @@ const data = [
       "pages": 226,
       "title": "Pride and Prejudice",
       "year": 1813,
-      "read": false    
+      "read": false,
+      "genre": "SCIENCE FICTION"
     },
     {
       "id": 9,
@@ -87,7 +95,8 @@ const data = [
       "pages": 443,
       "title": "Le P\u00e8re Goriot",
       "year": 1835,
-      "read": false    
+      "read": false,
+      "genre": "FANTASY"
     },
     {
       "id": 10,
@@ -96,7 +105,8 @@ const data = [
       "language": "French, English",      
       "pages": 256,
       "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
-      "year": 1952
+      "year": 1952,
+      "genre": "HISTORY"
     }
 ]
 

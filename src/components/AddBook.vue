@@ -57,6 +57,7 @@
                     'ROMANCE',
                     'FANTASY',
                     'HISTORY',
+                    'Fiction'
                 ]        
             }
         },
@@ -70,7 +71,8 @@
                 const newBook = {
                     title: this.title,
                     author: this.author,
-                    language: this.language                    
+                    language: this.language,
+                    genre: this.selected,
                 }
 
                 if (this.isValid()) {
@@ -102,52 +104,4 @@
         flex-direction: column;
         align-items: center;        
     }
-
-    input + input {
-        margin-top: 20px;
-    }
-
-    input[type="text"] {
-        padding: 10px;
-        width: 350px;
-        outline: 0;
-    }
-
-    input[type="number"] {
-        padding: 10px;
-        width: 350px;
-        outline: 0;
-    }
-    
-    input[type="submit"] {
-        background: #41b883;
-        color: #fff;
-        border: 1px solid #41b883;
-        cursor: pointer;
-        width: 100%;
-        height: 40px;
-        margin: 10px 10px;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: 800
-    }
-
-    select {
-        background: var(--white);
-        color: var(--text);
-        border: 1px solid #41b883;
-        cursor: pointer;
-        width: 100%;
-        height: 40px;
-        margin: 10px 10px;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: 400
-    }
-
-    input[type="submit"]:hover {
-        filter: brightness(0.7);
-        transition: filter 0.2s;
-    }
-
 </style>
