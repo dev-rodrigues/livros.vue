@@ -18,7 +18,6 @@ const actions = {
 
     async addBook( { commit }, book) {        
         book.id = state.books.length + 1;
-        console.log('novo book', book)
         commit('addBook', book)
     },
 
